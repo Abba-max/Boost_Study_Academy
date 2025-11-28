@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}Profile - Boost Study Academy{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="{% static 'assets/img/person/person-m-3.webp' %}" 
+                         class="rounded-circle mb-3" width="150" height="150">
+                    <h4>{{ user.get_full_name }}</h4>
+                    <p class="badge bg-primary">{{ user_profile.get_user_type_display }}</p>
+                    <p><i class="bi bi-envelope"></i> {{ user.email }}</p>
+                    <p><i class="bi bi-phone"></i> {{ user_profile.contact }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Profile Information</h5>
+                </div>
+                <div class="card-body">
+                    {% if user_profile.user_type == 'student' %}
+                        <p><strong>Student ID:</strong> {{ student_profile.student_id }}</p>
+                        <p><strong>Enrollment Date:</strong> {{ student_profile.enrollment_date }}</p>
+                    {% elif user_profile.user_type == 'teacher' %}
+                        <p><strong>Teacher ID:</strong> {{ teacher_profile.teacher_id }}</p>
+                        <p><strong>Subjects:</strong> {{ teacher_profile.subjects }}</p>
+                        <p><strong>Experience:</strong> {{ teacher_profile.experience_years }} years</p>
+                        <p><strong>Qualifications:</strong> {{ teacher_profile.qualifications }}</p>
+                        <p><strong>Bio:</strong> {{ teacher_profile.bio }}</p>
+                    {% endif %}
+                    <p><strong>Address:</strong> {{ user_profile.address }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
