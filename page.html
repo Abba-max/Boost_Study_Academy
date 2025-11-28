@@ -7,19 +7,20 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <form action="registration", method= 'POST'>
-            <label for="firstname">First Name: </label>
-            <input type="text">
-            <label for="lastname">Last Name: </label>
-            <input type="text">
-            <label for="contact">Contact: </label>
-            <input type="text">
-            <label for="email">Email: </label>  
-            <input type="email">
-            <label for="password">Password: </label>
-            <input type="password">
-            <label for="password">Confirm Password: </label>
-            <input type="password">
+        <form style="flex-direction:column; align-items:center;
+        justify-content:center;margin: 5px;" action="registration", method= 'POST'>
+            <label for="firstname" >First Name: </label>
+            <input type="text" name= "firstname">
+            <label for="lastname" >Last Name: </label>
+            <input type="text" name= "lastname">
+            <label for="contact" >Contact: </label>
+            <input type="text" name="contact">
+            <label for="email" >Email: </label>  
+            <input type="email" name="email">
+            <label for="password" >Password: </label>
+            <input type="password" name ="password">
+            <label for="password1" >Confirm Password: </label>
+            <input type="password" name ="password1">
             <button type="submit">Register</button>
 
         </form>
