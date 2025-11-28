@@ -61,7 +61,7 @@ Then visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
 
 - `manage.py` – Django's command-line utility.
 - `Boost_Study_Academy/` – Main project settings.
-- `[app_name]/` – Your Django apps.
+- `BoostApp/` – Your Django apps.
 - `requirements.txt` – Python dependencies.
 - `README.md` – This file.
 

@@ -21,7 +21,7 @@ def login(request):
             messages.error(request, "Invalid credentials.")
             return render(request, 'login.html')
     else:        
-        return render(request, 'login.html')
+        return render(request, '/login.html/')
  
 
 def registration(request):
@@ -55,3 +55,18 @@ def registration(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def about(request):
+    return render(request, 'about.html')
+
+def courses(request):
+    return render(request, 'courses.html')
+
+def instructors(request):
+    return render(request, 'instructors.html')  
+
+def pricing(request):
+    return render(request, 'pricing.html')  
+
+def contact(request):
+    return render(request, 'contact.html')  
