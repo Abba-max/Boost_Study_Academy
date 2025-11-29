@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +10,9 @@
     </head>
     <body>
         <form action="login", method= 'POST'>
+            {% for message in messages %}
+            <i class="fas fa-h3    ">{message}</i>
+            {% endfor %}
             <label for="email">Email: </label>  
             <input type="email" name="email">
             <label for="password">Password: </label>

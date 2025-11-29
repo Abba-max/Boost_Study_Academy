@@ -30,7 +30,7 @@ def login(request):
                     messages.success(request, f"Welcome back, {user.first_name}!")
             except:
                 messages.success(request, f"Welcome back!")
-            return redirect('index')
+            return redirect('login')
         else:
             messages.error(request, "Invalid credentials.")
             return render(request, 'login.html')
