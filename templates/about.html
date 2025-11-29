@@ -1,21 +1,19 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Learn more about Boost Study Academy and its mission to provide quality education.">
+  <meta name="keywords" content="education, online courses, academy">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/about.css" rel="stylesheet">
   {% comment %} <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   {% load static %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
@@ -23,132 +21,104 @@
 
 </head>
 
-<body class="about-page">
-
+<body>
   <!-- Header -->
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename">Boost Study Academy</h1>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <h1>Boost Study Academy</h1>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="instructors.html">Instructors</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="instructors.html">Instructors</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
-  <!-- Main -->
+  <!-- Main Content -->
   <main class="main">
-
     <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">About</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
-          </ol>
-        </nav>
+    <section class="page-title">
+      <div class="container">
+        <h1>About</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> / <span>About</span>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/education/education-square-2.webp" alt="About Us" class="img-fluid rounded-4">
+    <section class="about-section">
+      <div class="container">
+        <div class="about-hero">
+          <div class="about-image">
+            <img src="assets/img/students.webp" loading="lazy" alt="Our Students">
           </div>
+          <div class="about-text">
+            <span class="subtitle">About Us</span>
+            <h2>Empowering Future Leaders Through Quality Education</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="about-content">
-              <span class="subtitle">About Us</span>
-              <h2>Empowering Future Leaders Through Quality Education</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-              <div class="stats-row">
-                <div class="stats-item">
-                  <span class="count">15</span>
-                  <p>Years of Experience</p>
-                </div>
-                <div class="stats-item">
-                  <span class="count">200+</span>
-                  <p>Expert Instructors</p>
-                </div>
-                <div class="stats-item">
-                  <span class="count">50k+</span>
-                  <p>Students Worldwide</p>
-                </div>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-number">15</span>
+                <p>Years of Experience</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <p>Expert Instructors</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50k+</span>
+                <p>Students Worldwide</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Mission / Vision / Values -->
-        <div class="row mt-5 pt-4">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="mission-card">
-              <div class="icon-box"><i class="bi bi-bullseye"></i></div>
-              <h3>Our Mission</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-            </div>
+        <!-- Mission, Vision, Values -->
+        <div class="mvv-cards">
+          <div class="card">
+            <div class="icon"><i class="bi bi-bullseye"></i></div>
+            <h3>Our Mission</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="mission-card">
-              <div class="icon-box"><i class="bi bi-eye"></i></div>
-              <h3>Our Vision</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-            </div>
+          <div class="card">
+            <div class="icon"><i class="bi bi-eye"></i></div>
+            <h3>Our Vision</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="mission-card">
-              <div class="icon-box"><i class="bi bi-award"></i></div>
-              <h3>Our Values</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-            </div>
+          <div class="card">
+            <div class="icon"><i class="bi bi-award"></i></div>
+            <h3>Our Values</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
 
         <!-- Why Choose Us -->
-        <div class="row mt-5 pt-3 align-items-center">
-          <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="300">
-            <div class="achievements">
-              <span class="subtitle">Why Choose Us</span>
-              <h2>Transforming Education for a Better Tomorrow</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-
-              <ul class="achievements-list">
-                <li><i class="bi bi-check-circle-fill"></i> Flexible learning options and schedules</li>
-                <li><i class="bi bi-check-circle-fill"></i> Industry-experienced instructors</li>
-                <li><i class="bi bi-check-circle-fill"></i> Interactive and engaging course content</li>
-                <li><i class="bi bi-check-circle-fill"></i> Career guidance and placement support</li>
-                <li><i class="bi bi-check-circle-fill"></i> State-of-the-art online learning platform</li>
-              </ul>
-
-              <a href="#" class="btn-explore">Discover More <i class="bi bi-arrow-right"></i></a>
-            </div>
+        <div class="why-choose">
+          <div class="why-image">
+            <img src="assets/img/teachers.webp" loading="lazy" alt="Why Choose Us">
+          </div>
+          <div class="why-text">
+            <span class="subtitle">Why Choose Us</span>
+            <h2>Transforming Education for a Better Tomorrow</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <ul class="features">
+              <li><i class="bi bi-check-circle-fill"></i> Flexible learning options and schedules</li>
+              <li><i class="bi bi-check-circle-fill"></i> Industry-experienced instructors</li>
+              <li><i class="bi bi-check-circle-fill"></i> Interactive and engaging course content</li>
+              <li><i class="bi bi-check-circle-fill"></i> Career guidance and placement support</li>
+              <li><i class="bi bi-check-circle-fill"></i> State-of-the-art online learning platform</li>
+            </ul>
+            <a href="#" class="btn">Discover More <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
-
 </body>
 </html>
